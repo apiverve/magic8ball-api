@@ -1,32 +1,35 @@
 openapi: 3.0.4
 info:
   title: Magic 8-Ball
-  description: Magic 8-Ball is a fun tool that provides random predictions and answers like the classic toy. It returns one of 20 classic Magic 8-Ball responses categorized as affirmative, negative, or non-committal.
+  description: >-
+    Magic 8-Ball is a fun tool that provides random predictions and answers like
+    the classic toy. It returns one of 20 classic Magic 8-Ball responses
+    categorized as affirmative, negative, or non-committal.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
     email: hello@apiverve.com
     url: https://apiverve.com/contact
-  version: 1.0.9
+  version: 1.0.0
 externalDocs:
   description: Learn more about APIVerve
   url: https://docs.apiverve.com?utm_source=openapi
 servers:
-- url: https://api.apiverve.com/
+  - url: https://api.apiverve.com/
 paths:
   /v1/magic8ball:
     get:
       summary: Ask Magic 8-Ball
-      description: Magic 8-Ball is a fun tool that provides random predictions and answers like the classic toy. It returns one of 20 classic Magic 8-Ball responses categorized as affirmative, negative, or non-committal.
+      description: Get a random Magic 8-Ball prediction
       operationId: magic8ball
       parameters:
-      - name: question
-        in: query
-        schema:
-          type: string
-        required: false
-        description: Your question for the Magic 8-Ball (optional)
-        example: Will it rain today?
+        - name: question
+          in: query
+          schema:
+            type: string
+          required: false
+          description: Your question for the Magic 8-Ball (optional)
+          example: Will it rain today?
       responses:
         '200':
           description: Successful Response
@@ -42,24 +45,24 @@ paths:
                     type: string
                     description: error
                   data:
-                    type: string
+                    type: object
                     description: data
               example:
                 status: ok
-                error: 
+                error: null
                 data:
                   question: Will it rain today?
-                  answer: Outlook not so good
-                  type: negative
+                  answer: Signs point to yes
+                  type: affirmative
                   certainty: medium
                   shake_count: 3
-                  timestamp: 2025-11-15T05:18:29.0490000Z
+                  timestamp: '2025-12-16T22:25:52.008Z'
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
           description: Requested resource was not found
         '500':
-          description: A server error has occured, try again later
+          description: A server error has occurred, try again later
 components:
   securitySchemes:
     api_key:
@@ -67,4 +70,4 @@ components:
       name: x-api-key
       in: header
 security:
-- api_key: []
+  - api_key: []
