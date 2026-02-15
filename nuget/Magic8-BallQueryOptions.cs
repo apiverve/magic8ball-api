@@ -12,7 +12,6 @@ namespace APIVerve.API.Magic8-Ball
     {
         /// <summary>
         /// Your question for the Magic 8-Ball (optional)
-        /// Example: Will it rain today?
         /// </summary>
         [JsonProperty("question")]
         public string Question { get; set; }
