@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/magic8ball",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "Magic 8-Ball is a fun tool that provides random predictions and answers like the classic toy. It returns one of 20 classic Magic 8-Ball responses categorized as affirmative, negative, or non-committal.",
   "main": "index.js",
   "types": "index.d.ts",
