@@ -221,8 +221,9 @@ from apiverve_magic8-ball.apiClient import Magic8ballAPIClient
 
 api = Magic8ballAPIClient("[YOUR_API_KEY]")
 
+query = { "question": "Will it rain today?" }
+
 try:
-    query = { "question": "Will it rain today?" }
     result = api.execute(query)
     print(result)
 finally:
