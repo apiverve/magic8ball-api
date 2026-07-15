@@ -4,21 +4,33 @@ declare module '@apiverve/magic8ball' {
     secure?: boolean;
   }
 
+  /**
+   * Describes fields the current plan does not unlock. Locked fields arrive as null
+   * in `data`; `locked_fields` names them, using dot paths for nested fields.
+   * Absent when the plan unlocks everything.
+   */
+  export interface PremiumInfo {
+    message: string;
+    upgrade_url: string;
+    locked_fields: string[];
+  }
+
   export interface magic8ballResponse {
     status: string;
     error: string | null;
     data: Magic8-BallData;
     code?: number;
+    premium?: PremiumInfo;
   }
 
 
   interface Magic8BallData {
-      question:   string;
-      answer:     string;
-      type:       string;
-      certainty:  string;
-      shakeCount: number;
-      timestamp:  Date;
+      question:   null | string;
+      answer:     null | string;
+      type:       null | string;
+      certainty:  null | string;
+      shakeCount: number | null;
+      timestamp:  Date | null;
   }
 
   export default class magic8ballWrapper {
