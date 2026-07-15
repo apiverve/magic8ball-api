@@ -123,11 +123,11 @@ async function makeRequest() {
   "error": null,
   "data": {
     "question": "Will it rain today?",
-    "answer": "Outlook not so good",
-    "type": "negative",
+    "answer": "Signs point to yes",
+    "type": "affirmative",
     "certainty": "medium",
     "shake_count": 3,
-    "timestamp": "2025-11-15T05:18:29.049Z"
+    "timestamp": "2025-12-16T22:25:52.008Z"
   }
 }
 ```
