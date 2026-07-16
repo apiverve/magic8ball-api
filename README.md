@@ -191,11 +191,33 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Magic 8-Ball API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "question": "Will it rain today?",
+    "answer": "Signs point to yes",
+    "type": "affirmative",
+    "certainty": "medium",
+    "shake_count": 3,
+    "timestamp": "2025-12-16T22:25:52.008Z"
+  }
 }
 ```
 
