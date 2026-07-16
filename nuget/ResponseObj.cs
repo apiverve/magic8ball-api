@@ -25,6 +25,9 @@ namespace APIVerve.API.Magic8-Ball
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -42,9 +45,21 @@ namespace APIVerve.API.Magic8-Ball
         public string Certainty { get; set; }
 
         [JsonProperty("shake_count")]
-        public long ShakeCount { get; set; }
+        public long? ShakeCount { get; set; }
 
         [JsonProperty("timestamp")]
-        public DateTimeOffset Timestamp { get; set; }
+        public DateTimeOffset? Timestamp { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
