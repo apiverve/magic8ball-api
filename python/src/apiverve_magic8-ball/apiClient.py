@@ -1,6 +1,6 @@
 import re
-from typing import Dict, Optional, Any
-from dataclasses import dataclass, List
+from typing import Dict, Optional, Any, List
+from dataclasses import dataclass
 import requests
 
 
@@ -24,7 +24,7 @@ class ValidationError(Magic8ballAPIClientError):
 class Magic8ballAPIClient:
     # Validation rules for parameters (generated from schema)
     VALIDATION_RULES = {
-        "question": {"type": "string", "required": False}
+        "question": {"type": "string", "required": False, "maxLength": 500}
     }
 
     # Format validation patterns

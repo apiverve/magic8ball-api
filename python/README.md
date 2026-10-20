@@ -3,11 +3,10 @@ Magic 8-Ball API
 
 Magic 8-Ball is a fun tool that provides random predictions and answers like the classic toy. It returns one of 20 classic Magic 8-Ball responses categorized as affirmative, negative, or non-committal.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Python API Wrapper for the [Magic 8-Ball API](https://apiverve.com/marketplace/magic8ball?utm_source=pypi&utm_medium=readme)
+[![PyPI version](https://img.shields.io/pypi/v/apiverve-magic8-ball.svg)](https://pypi.org/project/apiverve-magic8-ball/)
+
+This is a Python wrapper for the [Magic 8-Ball API](https://apiverve.com/marketplace/magic8ball?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -29,8 +28,8 @@ pip3 install apiverve-magic8-ball
 
 ## Configuration
 
-Before using the magic8ball API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=readme)
+Before using the Magic 8-Ball API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -60,7 +59,7 @@ except Exception as e:
 
 ## Usage
 
-The Magic 8-Ball API documentation is found here: [https://docs.apiverve.com/ref/magic8ball](https://docs.apiverve.com/ref/magic8ball?utm_source=pypi&utm_medium=readme).
+The Magic 8-Ball API documentation is found here: [https://docs.apiverve.com/ref/magic8ball](https://docs.apiverve.com/ref/magic8ball?utm_source=pypi&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
@@ -103,11 +102,11 @@ print(result)
   "error": null,
   "data": {
     "question": "Will it rain today?",
-    "answer": "Outlook not so good",
-    "type": "negative",
+    "answer": "Signs point to yes",
+    "type": "affirmative",
     "certainty": "medium",
     "shake_count": 3,
-    "timestamp": "2025-11-15T05:18:29.049Z"
+    "timestamp": "2025-12-16T22:25:52.008Z"
   }
 }
 ```
@@ -235,7 +234,7 @@ finally:
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -246,12 +245,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
