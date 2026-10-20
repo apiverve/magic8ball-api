@@ -67,7 +67,7 @@ namespace APIVerve.API.Magic8-Ball
         /// <summary>Validation rules for parameters</summary>
         private static readonly Dictionary<string, ValidationRule> _validationRules = new Dictionary<string, ValidationRule>
         {
-            { "question", new ValidationRule { Type = "string", Required = false } }
+            { "question", new ValidationRule { Type = "string", Required = false, MaxLength = 500 } }
         };
 
         /// <summary>Format validation patterns</summary>
