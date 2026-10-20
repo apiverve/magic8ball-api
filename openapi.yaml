@@ -19,7 +19,7 @@ servers:
 paths:
   /v1/magic8ball:
     get:
-      summary: Ask Magic 8-Ball
+      summary: Magic 8-Ball
       description: Get a random Magic 8-Ball prediction
       operationId: magic8ball
       parameters:
