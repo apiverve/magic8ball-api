@@ -30,7 +30,7 @@ class magic8ballWrapper {
         this.baseURL = 'https://api.apiverve.com/v1/magic8ball';
 
         // Validation rules for parameters (generated from schema)
-        this.validationRules = {"question":{"type":"string","required":false}};
+        this.validationRules = {"question":{"type":"string","required":false,"maxLength":500}};
     }
 
     /**
