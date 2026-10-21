@@ -1,7 +1,7 @@
 {
     "name": "apiverve/magic8ball",
     "description": "Magic 8-Ball is a fun tool that provides random predictions and answers like the classic toy. It returns one of 20 classic Magic 8-Ball responses categorized as affirmative, negative, or non-committal.",
-    "version": "1.2.0",
+    "version": "1.2.2",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -21,7 +21,7 @@
         "prediction",
         "decision maker"
     ],
-    "homepage": "https://apiverve.com/marketplace/magic8ball?utm_source=php&utm_medium=homepage",
+    "homepage": "https://apiverve.com/marketplace/magic8ball?utm_source=php&utm_medium=referral&utm_content=homepage",
     "support": {
         "email": "hello@apiverve.com",
         "docs": "https://docs.apiverve.com/ref/magic8ball",
