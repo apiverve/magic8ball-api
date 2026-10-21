@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 using System.Net;
 #endif
 
-namespace APIVerve.API.Magic8-Ball
+namespace APIVerve.API.Magic8Ball
 {
     /// <summary>
     /// Validation rule for a parameter
@@ -54,9 +54,9 @@ namespace APIVerve.API.Magic8-Ball
     }
 
     /// <summary>
-    /// Client for the Magic8-Ball API
+    /// Client for the Magic8Ball API
     /// </summary>
-    public class Magic8-BallAPIClient
+    public class Magic8BallAPIClient
 #if !NET20 && !NET35 && !NET40
         : IDisposable
 #endif
@@ -100,7 +100,7 @@ namespace APIVerve.API.Magic8-Ball
         /// </summary>
         /// <param name="apiKey">Your API key from https://apiverve.com</param>
         /// <exception cref="ArgumentException">Thrown when API key is invalid</exception>
-        public Magic8-BallAPIClient(string apiKey)
+        public Magic8BallAPIClient(string apiKey)
 #if !NET20 && !NET35 && !NET40
             : this(apiKey, true, false, null)
 #endif
@@ -123,7 +123,7 @@ namespace APIVerve.API.Magic8-Ball
         /// <param name="isSecure">Use HTTPS (recommended)</param>
         /// <param name="isDebug">Enable debug logging</param>
         /// <exception cref="ArgumentException">Thrown when API key is invalid</exception>
-        public Magic8-BallAPIClient(string apiKey, bool isSecure, bool isDebug)
+        public Magic8BallAPIClient(string apiKey, bool isSecure, bool isDebug)
 #if !NET20 && !NET35 && !NET40
             : this(apiKey, isSecure, isDebug, null)
 #endif
@@ -148,7 +148,7 @@ namespace APIVerve.API.Magic8-Ball
         /// <param name="isDebug">Enable debug logging</param>
         /// <param name="httpClient">Custom HttpClient instance (optional). If null, a new instance will be created.</param>
         /// <exception cref="ArgumentException">Thrown when API key is invalid</exception>
-        public Magic8-BallAPIClient(string apiKey, bool isSecure, bool isDebug, HttpClient httpClient)
+        public Magic8BallAPIClient(string apiKey, bool isSecure, bool isDebug, HttpClient httpClient)
         {
             // Validate API key format
             ValidateApiKey(apiKey);
@@ -303,7 +303,7 @@ namespace APIVerve.API.Magic8-Ball
         /// </summary>
         /// <param name="callback">Callback to invoke with the result</param>
         /// <param name="options">Query parameters</param>
-        public void ExecuteAsync(ExecuteAsyncCallback callback, Magic8-BallQueryOptions options = null)
+        public void ExecuteAsync(ExecuteAsyncCallback callback, Magic8BallQueryOptions options = null)
         {
             if (callback == null)
             {
@@ -340,7 +340,7 @@ namespace APIVerve.API.Magic8-Ball
         /// <param name="callback">Callback to invoke with the result</param>
         /// <param name="options">Query parameters</param>
         [Obsolete("Use ExecuteAsync() with async/await pattern instead")]
-        public void ExecuteAsync(ExecuteAsyncCallback callback, Magic8-BallQueryOptions options = null)
+        public void ExecuteAsync(ExecuteAsyncCallback callback, Magic8BallQueryOptions options = null)
         {
             if (callback == null)
             {
@@ -371,7 +371,7 @@ namespace APIVerve.API.Magic8-Ball
         /// </summary>
         /// <param name="options">Query options to validate</param>
         /// <exception cref="ValidationException">Thrown when validation fails</exception>
-        private void ValidateParams(Magic8-BallQueryOptions options)
+        private void ValidateParams(Magic8BallQueryOptions options)
         {
             if (_validationRules == null || _validationRules.Count == 0) return;
 
@@ -465,7 +465,7 @@ namespace APIVerve.API.Magic8-Ball
         /// <exception cref="WebException">Thrown when the request fails (.NET 2.0-4.0)</exception>
         /// <exception cref="HttpRequestException">Thrown when the request fails (.NET 4.5+)</exception>
         /// <exception cref="ValidationException">Thrown when parameter validation fails</exception>
-        public ResponseObj Execute(Magic8-BallQueryOptions options = null)
+        public ResponseObj Execute(Magic8BallQueryOptions options = null)
         {
             // Validate parameters before making request
             ValidateParams(options);
@@ -484,7 +484,7 @@ namespace APIVerve.API.Magic8-Ball
         /// <param name="options">Query parameters</param>
         /// <returns>Task containing the API response</returns>
         /// <exception cref="HttpRequestException">Thrown when the request fails</exception>
-        public Task<ResponseObj> ExecuteAsync(Magic8-BallQueryOptions options = null)
+        public Task<ResponseObj> ExecuteAsync(Magic8BallQueryOptions options = null)
         {
             return ExecuteAsync(options, CancellationToken.None);
         }
@@ -497,7 +497,7 @@ namespace APIVerve.API.Magic8-Ball
         /// <returns>Task containing the API response</returns>
         /// <exception cref="HttpRequestException">Thrown when the request fails</exception>
         /// <exception cref="OperationCanceledException">Thrown when the operation is cancelled</exception>
-        public async Task<ResponseObj> ExecuteAsync(Magic8-BallQueryOptions options, CancellationToken cancellationToken)
+        public async Task<ResponseObj> ExecuteAsync(Magic8BallQueryOptions options, CancellationToken cancellationToken)
         {
             int attempt = 0;
             Exception lastException = null;
@@ -546,7 +546,7 @@ namespace APIVerve.API.Magic8-Ball
         /// <summary>
         /// Executes the actual HTTP request
         /// </summary>
-        private async Task<ResponseObj> ExecuteRequestAsync(Magic8-BallQueryOptions options, CancellationToken cancellationToken)
+        private async Task<ResponseObj> ExecuteRequestAsync(Magic8BallQueryOptions options, CancellationToken cancellationToken)
         {
             try
             {
@@ -641,7 +641,7 @@ namespace APIVerve.API.Magic8-Ball
         /// <summary>
         /// Execute the API call using WebRequest (for .NET 2.0-4.0)
         /// </summary>
-        private ResponseObj ExecuteWithWebRequest(Magic8-BallQueryOptions options)
+        private ResponseObj ExecuteWithWebRequest(Magic8BallQueryOptions options)
         {
             int attempt = 0;
             Exception lastException = null;
@@ -684,7 +684,7 @@ namespace APIVerve.API.Magic8-Ball
         /// <summary>
         /// Internal WebRequest execution
         /// </summary>
-        private ResponseObj ExecuteWebRequestInternal(Magic8-BallQueryOptions options)
+        private ResponseObj ExecuteWebRequestInternal(Magic8BallQueryOptions options)
         {
             try
             {
@@ -806,7 +806,7 @@ namespace APIVerve.API.Magic8-Ball
         /// <summary>
         /// Constructs the full API URL with query parameters
         /// </summary>
-        private string ConstructURL(Magic8-BallQueryOptions options)
+        private string ConstructURL(Magic8BallQueryOptions options)
         {
             string url = _apiEndpoint;
 

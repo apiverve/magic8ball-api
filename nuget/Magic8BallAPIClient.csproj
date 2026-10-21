@@ -25,7 +25,7 @@
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <NoWarn>$(NoWarn);CS1591</NoWarn>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
-    <PackageId>APIVerve.API.Magic8-Ball</PackageId>
+    <PackageId>APIVerve.API.Magic8Ball</PackageId>
     <Nullable>disable</Nullable>
     <LangVersion>latest</LangVersion>
 

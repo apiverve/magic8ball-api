@@ -6,7 +6,7 @@
 //
 //    var responseObj = ResponseObj.FromJson(jsonString);
 
-namespace APIVerve.API.Magic8-Ball
+namespace APIVerve.API.Magic8Ball
 {
     using System;
     using System.Collections.Generic;

@@ -4,7 +4,7 @@ Magic 8-Ball API
 Magic 8-Ball is a fun tool that provides random predictions and answers like the classic toy. It returns one of 20 classic Magic 8-Ball responses categorized as affirmative, negative, or non-committal.
 
 
-[![NuGet version](https://img.shields.io/nuget/v/APIVerve.API.Magic8-Ball.svg)](https://www.nuget.org/packages/APIVerve.API.Magic8-Ball)
+[![NuGet version](https://img.shields.io/nuget/v/APIVerve.API.Magic8Ball.svg)](https://www.nuget.org/packages/APIVerve.API.Magic8Ball)
 
 This is a .NET wrapper for the [Magic 8-Ball API](https://apiverve.com/marketplace/magic8ball?utm_source=nuget&utm_medium=referral&utm_content=readme)
 
@@ -14,17 +14,17 @@ This is a .NET wrapper for the [Magic 8-Ball API](https://apiverve.com/marketpla
 
 Using the .NET CLI:
 ```
-dotnet add package APIVerve.API.Magic8-Ball
+dotnet add package APIVerve.API.Magic8Ball
 ```
 
 Using the Package Manager:
 ```
-nuget install APIVerve.API.Magic8-Ball
+nuget install APIVerve.API.Magic8Ball
 ```
 
 Using the Package Manager Console:
 ```
-Install-Package APIVerve.API.Magic8-Ball
+Install-Package APIVerve.API.Magic8Ball
 ```
 
 From within Visual Studio:
@@ -32,8 +32,8 @@ From within Visual Studio:
 1. Open the Solution Explorer
 2. Right-click on a project within your solution
 3. Click on Manage NuGet Packages
-4. Click on the Browse tab and search for "APIVerve.API.Magic8-Ball"
-5. Click on the APIVerve.API.Magic8-Ball package, select the appropriate version in the right-tab and click Install
+4. Click on the Browse tab and search for "APIVerve.API.Magic8Ball"
+5. Click on the APIVerve.API.Magic8Ball package, select the appropriate version in the right-tab and click Install
 
 ---
 
@@ -50,16 +50,16 @@ Here's a simple example to get you started quickly:
 
 ```csharp
 using System;
-using APIVerve.API.Magic8-Ball;
+using APIVerve.API.Magic8Ball;
 
 class Program
 {
     static async Task Main(string[] args)
     {
         // Initialize the API client
-        var apiClient = new Magic8-BallAPIClient("[YOUR_API_KEY]");
+        var apiClient = new Magic8BallAPIClient("[YOUR_API_KEY]");
 
-        var queryOptions = new Magic8-BallQueryOptions {
+        var queryOptions = new Magic8BallQueryOptions {
             Question = "Will it rain today?"
         };
 
@@ -101,7 +101,7 @@ Magic 8-Ball API uses API Key-based authentication. When you create an instance 
 
 ```csharp
 // Create an instance of the API client
-var apiClient = new Magic8-BallAPIClient("[YOUR_API_KEY]");
+var apiClient = new Magic8BallAPIClient("[YOUR_API_KEY]");
 ```
 
 ---
@@ -115,15 +115,15 @@ The modern async/await pattern provides the best performance and code readabilit
 ```csharp
 using System;
 using System.Threading.Tasks;
-using APIVerve.API.Magic8-Ball;
+using APIVerve.API.Magic8Ball;
 
 public class Example
 {
     public static async Task Main(string[] args)
     {
-        var apiClient = new Magic8-BallAPIClient("[YOUR_API_KEY]");
+        var apiClient = new Magic8BallAPIClient("[YOUR_API_KEY]");
 
-        var queryOptions = new Magic8-BallQueryOptions {
+        var queryOptions = new Magic8BallQueryOptions {
             Question = "Will it rain today?"
         };
 
@@ -147,15 +147,15 @@ If you need to use synchronous code, you can use the `Execute` method:
 
 ```csharp
 using System;
-using APIVerve.API.Magic8-Ball;
+using APIVerve.API.Magic8Ball;
 
 public class Example
 {
     public static void Main(string[] args)
     {
-        var apiClient = new Magic8-BallAPIClient("[YOUR_API_KEY]");
+        var apiClient = new Magic8BallAPIClient("[YOUR_API_KEY]");
 
-        var queryOptions = new Magic8-BallQueryOptions {
+        var queryOptions = new Magic8BallQueryOptions {
             Question = "Will it rain today?"
         };
 
@@ -184,15 +184,15 @@ The API client provides comprehensive error handling. Here are some examples:
 ```csharp
 using System;
 using System.Threading.Tasks;
-using APIVerve.API.Magic8-Ball;
+using APIVerve.API.Magic8Ball;
 
 public class Example
 {
     public static async Task Main(string[] args)
     {
-        var apiClient = new Magic8-BallAPIClient("[YOUR_API_KEY]");
+        var apiClient = new Magic8BallAPIClient("[YOUR_API_KEY]");
 
-        var queryOptions = new Magic8-BallQueryOptions {
+        var queryOptions = new Magic8BallQueryOptions {
             Question = "Will it rain today?"
         };
 
@@ -236,19 +236,19 @@ public class Example
 ```csharp
 using System;
 using System.Threading.Tasks;
-using APIVerve.API.Magic8-Ball;
+using APIVerve.API.Magic8Ball;
 
 public class Example
 {
     public static async Task Main(string[] args)
     {
-        var apiClient = new Magic8-BallAPIClient("[YOUR_API_KEY]");
+        var apiClient = new Magic8BallAPIClient("[YOUR_API_KEY]");
 
         // Configure retry behavior (max 3 retries)
         apiClient.SetMaxRetries(3);        // Retry up to 3 times (default: 0, max: 3)
         apiClient.SetRetryDelay(2000);     // Wait 2 seconds between retries
 
-        var queryOptions = new Magic8-BallQueryOptions {
+        var queryOptions = new Magic8BallQueryOptions {
             Question = "Will it rain today?"
         };
 
@@ -283,13 +283,13 @@ public class Example
 Add custom headers to your requests:
 
 ```csharp
-var apiClient = new Magic8-BallAPIClient("[YOUR_API_KEY]");
+var apiClient = new Magic8BallAPIClient("[YOUR_API_KEY]");
 
 // Add custom headers
 apiClient.AddCustomHeader("X-Custom-Header", "custom-value");
 apiClient.AddCustomHeader("X-Request-ID", Guid.NewGuid().ToString());
 
-var queryOptions = new Magic8-BallQueryOptions {
+var queryOptions = new Magic8BallQueryOptions {
     Question = "Will it rain today?"
 };
 
@@ -307,7 +307,7 @@ apiClient.ClearCustomHeaders();
 Enable logging for debugging:
 
 ```csharp
-var apiClient = new Magic8-BallAPIClient("[YOUR_API_KEY]", isDebug: true);
+var apiClient = new Magic8BallAPIClient("[YOUR_API_KEY]", isDebug: true);
 
 // Or use a custom logger
 apiClient.SetLogger(message =>
@@ -315,7 +315,7 @@ apiClient.SetLogger(message =>
     Console.WriteLine($"[LOG] {DateTime.Now:yyyy-MM-dd HH:mm:ss} - {message}");
 });
 
-var queryOptions = new Magic8-BallQueryOptions {
+var queryOptions = new Magic8BallQueryOptions {
     Question = "Will it rain today?"
 };
 
@@ -327,13 +327,13 @@ var response = await apiClient.ExecuteAsync(queryOptions);
 Customize retry behavior for failed requests:
 
 ```csharp
-var apiClient = new Magic8-BallAPIClient("[YOUR_API_KEY]");
+var apiClient = new Magic8BallAPIClient("[YOUR_API_KEY]");
 
 // Set retry options
 apiClient.SetMaxRetries(3);           // Retry up to 3 times (default: 0, max: 3)
 apiClient.SetRetryDelay(1500);        // Wait 1.5 seconds between retries (default: 1000ms)
 
-var queryOptions = new Magic8-BallQueryOptions {
+var queryOptions = new Magic8BallQueryOptions {
     Question = "Will it rain today?"
 };
 
@@ -345,11 +345,11 @@ var response = await apiClient.ExecuteAsync(queryOptions);
 The API client implements `IDisposable` for proper resource cleanup:
 
 ```csharp
-var queryOptions = new Magic8-BallQueryOptions {
+var queryOptions = new Magic8BallQueryOptions {
     Question = "Will it rain today?"
 };
 
-using (var apiClient = new Magic8-BallAPIClient("[YOUR_API_KEY]"))
+using (var apiClient = new Magic8BallAPIClient("[YOUR_API_KEY]"))
 {
     var response = await apiClient.ExecuteAsync(queryOptions);
     Console.WriteLine(Newtonsoft.Json.JsonConvert.SerializeObject(response, Newtonsoft.Json.Formatting.Indented));
