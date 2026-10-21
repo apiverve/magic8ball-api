@@ -19,7 +19,7 @@ use APIVerve\Magic8ball\Exceptions\ValidationException;
  * print_r($response);
  * ```
  *
- * @see https://apiverve.com/marketplace/magic8ball?utm_source=php&utm_medium=readme
+ * @see https://apiverve.com/marketplace/magic8ball?utm_source=php&utm_medium=referral&utm_content=readme
  */
 class Client
 {
@@ -34,7 +34,7 @@ class Client
      * Validation rules for parameters
      */
     private const VALIDATION_RULES = [
-        'question' => ['type' => 'string', 'required' => false]
+        'question' => ['type' => 'string', 'required' => false, 'maxLength' => 500]
     ];
 
     /**
