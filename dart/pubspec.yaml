@@ -1,6 +1,6 @@
 name: apiverve_magic8ball
 description: "Magic 8-Ball is a fun tool that provides random predictions and answers like the classic toy. It returns one of 20 classic Magic 8-Ball responses categorized as affirmative, negative, or non-committal."
-version: 1.2.5
+version: 1.2.6
 homepage: https://apiverve.com/marketplace/magic8ball?utm_source=dart&utm_medium=referral&utm_content=homepage
 repository: https://github.com/apiverve/magic8ball-api/tree/main/dart
 
